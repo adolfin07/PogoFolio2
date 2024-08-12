@@ -128,59 +128,54 @@ body {
             flex-basis: 70%;
             background-color: var(--red);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
+            flex-direction: row;
+            padding-left: 3%;
+            position: relative;
+            overflow: hidden;
 
-            h1 {
-                font-size: 50px;
-                background: radial-gradient(circle at 100%,
-                        #fff,
-                        #5D0E41 50%,
-                        #001530 75%,
-                        #00224D 75%);
-                background-size: 200% auto;
-                color: #000;
-                background-clip: text;
+            .txt {
 
-                -webkit-text-fill-color: transparent;
-
-                animation: animatedTextGradient 2.5s linear infinite
+                flex-basis: 35%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
-            h3 {
-                font-size: 15px;
-                color: rgba(255, 255, 255, 0.719);
+            .setup-img {
+                margin-left: 5%;
+                flex-basis: 65%;
+
+                height: 50%;
+                background-image: url(../img/setup.jpeg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
             }
+
+
+            .noelle_sticker {
+                position: absolute;
+                width: 25%;
+                bottom: -25px;
+                right: -10px;
+                rotate: -20deg;
+
+                animation-name: noelleslide;
+                animation-duration: 300ms;
+            }
+
+
+
         }
     }
 }
 
-//animations
-@keyframes animatedTextGradient {
-    to {
-        background-position: 200% center;
-    }
-}
-
-@keyframes noelleslide {
-    from {
-        transform: translateY(100px);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-
-
-}
-
 //responsive
-
-
 @media(max-width:1024px) {
     .main {
         max-width: 80%;
@@ -192,6 +187,10 @@ body {
     .main .main_container .main-left ul li {
         margin-bottom: 6px;
         font-size: 14px;
+    }
+
+    .main .main_container .main-right .txt .parrap {
+        font-size: 10px;
     }
 }
 
@@ -205,12 +204,15 @@ body {
 
     .main .main_container .main-left ul li {
         margin-bottom: 6px;
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .main .main_container .main-right .txt .parrap {
+        font-size: 9px;
     }
 }
 
 @media(max-width:425px) {
-
     .main {
         max-width: 90%;
         margin: 0 auto;
@@ -246,14 +248,23 @@ body {
 
     .main .main_container .main-right {
         text-align: center;
-        padding: 25% 0;
+        padding: 25% 10%;
+        display: flex;
+        flex-direction: column;
     }
+
+    .main .main_container .main-right .txt .parrap {
+        font-size: 8px;
+    }
+
 }
 
 @media(max-width:375px) {
     .main .main_container .main-right {
         text-align: center;
-        padding: 35% 0;
+        padding: 35% 10%;
+        display: flex;
+        flex-direction: column;
     }
 }
 

@@ -67,120 +67,62 @@ body {
         background-color: #001530;
         border-radius: 10px;
 
-        .main-left {
-            padding: 7% 0;
-            flex-basis: 30%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-left: 1px solid var(--red);
-            background-color: #001530;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
 
-            .left_img {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 60%;
-                    border-radius: 50%;
-
-                    filter: drop-shadow(2px 3px 8px var(--red));
-                }
-
-            }
-
-            ul {
-                padding: 30px 0;
-
-                li {
-                    margin-bottom: 6px;
-                    font-size: 17px;
-                }
-
-            }
-
-            .left_links {
-
-                width: 50%;
-                display: flex;
-                justify-content: space-around;
-
-                a {
-                    font-size: 35px;
-
-                    i {
-                        color: var(--red);
-                        transition: all 300ms ease-in-out;
-                    }
-
-                    i:hover {
-                        color: var(--white);
-                    }
-                }
-            }
-        }
 
         .main-right {
 
-            flex-basis: 70%;
-            background-color: var(--red);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 3%;
 
-            h1 {
-                font-size: 50px;
-                background: radial-gradient(circle at 100%,
-                        #fff,
-                        #5D0E41 50%,
-                        #001530 75%,
-                        #00224D 75%);
-                background-size: 200% auto;
-                color: #000;
-                background-clip: text;
+            max-height: 704px;
 
-                -webkit-text-fill-color: transparent;
+            .project_container {
+                width: 45%;
+                background-color: #5d0e4175;
+                padding: 15px;
+                border-radius: 10px;
 
-                animation: animatedTextGradient 2.5s linear infinite
+                p {
+                    color: white;
+                    font-size: 22px;
+                }
+
+                span {
+                    font-size: 15px;
+                    color: rgba(255, 255, 255, 0.582);
+                }
+
+                .div_mask {
+                    width: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-top: 20px;
+                    height: 33%;
+
+                    a {
+
+                        img {
+                            width: 100%;
+                            transition: all 300ms ease-in-out;
+                        }
+
+                        img:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
             }
 
-            h3 {
-                font-size: 15px;
-                color: rgba(255, 255, 255, 0.719);
-            }
+
+
         }
     }
 }
 
-//animations
-@keyframes animatedTextGradient {
-    to {
-        background-position: 200% center;
-    }
-}
-
-@keyframes noelleslide {
-    from {
-        transform: translateY(100px);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-
-
-}
-
 //responsive
-
-
 @media(max-width:1024px) {
     .main {
         max-width: 80%;
@@ -210,14 +152,12 @@ body {
 }
 
 @media(max-width:425px) {
-
     .main {
         max-width: 90%;
         margin: 0 auto;
         margin-top: 10%;
         border-radius: 10px;
     }
-
     .main .main_container {
         display: flex;
         flex-direction: column;
@@ -248,20 +188,17 @@ body {
         text-align: center;
         padding: 25% 0;
     }
-}
 
-@media(max-width:375px) {
     .main .main_container .main-right {
-        text-align: center;
-        padding: 35% 0;
+        
+        padding: 5% 0;
+      max-height: 100%;
     }
-}
-
-@media (max-width: 320px) {
-    .main {
-        max-width: 90%;
-        margin: 0 auto;
-        margin-top: 25%;
+    .main .main_container .main-right .project_container {
+        width: 100%;
+        background-color: rgba(93, 14, 65, 0.4588235294);
+        padding: 15px;
         border-radius: 10px;
+       
     }
 }

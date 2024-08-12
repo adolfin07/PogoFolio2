@@ -1,0 +1,21 @@
+
+
+@media (max-width: 320px) {
+    .main {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-top: 35%;
+        border-radius: 10px;
+    }
+    .main .main_container .main-right h1 {
+        font-size: 30px;
+        background: radial-gradient(circle at 100%, #fff, #5D0E41 50%, #001530 75%, #00224D 75%);
+        background-size: 200% auto;
+        color: #000;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animatedTextGradient 2.5s linear infinite;
+    }
+}
+
